@@ -1,0 +1,90 @@
+
+*, *::before, *::after {
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+  }
+
+  body {
+    background:  #FBFEFD;
+    color: #a6a6a6;
+    line-height: 1.6;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15vh 70vh 15vh;
+    width: 100%;
+  }
+  a {
+    text-decoration: none;
+  }
+header{
+    grid-column:  1 /2;
+    grid-row: 1 / 2;
+}
+
+nav {
+    max-width: 960px;
+    width: 90%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+.nav_item{
+    margin-bottom: 1rem;
+}
+.nav_link, .nav_logo, .nav_toggle{
+    color: #a6a6a6;
+
+}
+.nav_logo:hover{
+    color: #a6a6a6;
+
+}
+.nav_link{
+    transition: .3s;
+}
+.nav_toggle{
+    font-size: large1.3rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+    .nav_menu{
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      padding: 1.5rem 0 1rem;
+      text-align: center;
+      background:  #FBFEFD;
+      transition: .2s;
+      box-shadow: 0 4px 4px rgba(0,0,0,.1);
+      border-radius: 0 0 1rem 1rem;
+      z-index: 1;
+      cursor: pointer;
+    }
+  }
+  .show-menu{
+    top: 3rem;
+  }
+
+  .active-link{
+    color: #a6a6a6;
+  }
+
+main {
+    background: gray;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+}
+
+footer{
+    background: blue;
+    grid-column: 1 / 2;
+
+}
